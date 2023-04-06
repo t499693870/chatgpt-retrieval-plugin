@@ -1,4 +1,34 @@
-# ChatGPT Retrieval Plugin
+# ChatGPT Retrieval Plugin, Hosted on Render
+
+Fork this repo and click the button below to deploy your ChatGPT Retrieval
+Plugin server to [Render](https://render.com). You will be prompted to enter
+your OpenAI API key. The bearer token for your retrieval plugin server will be
+generated automatically. You can find it in the "Environment" tab on the [Render
+dashboard](https://dashboard.render.com) page for your server.
+
+<a href="https://render.com/deploy?repo=https://github.com/render-examples/chatgpt-retrieval-plugin/tree/main">
+<img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" />
+</a>
+<br><br>
+
+The [Render Blueprint](https://render.com/docs/blueprint-spec) in this repo at
+[render.yaml](render.yaml) configures the OpenAI Retrieval Plugin FastAPI server
+and a self-hosted [Weaviate](https://weaviate.io/) vector database to back it.
+As of April 2023, this setup costs $15 to run continuously for a month. The two
+services on Render's Starter plan cost $7/month each, and the 4 GB persistent
+disk attached to the Weaviate service costs $1/month. Check [Render's pricing
+page](https://render.com/pricing) for up-to-date pricing information.
+
+You might want to scale up to a larger plan or to horizontally scale the FastAPI
+server. Consult Weaviate's [resource planning
+doc](https://weaviate.io/developers/weaviate/concepts/resources) for more
+guidance. The FastAPI server is compatible with [Render's free
+plan](https://render.com/docs/free) but the Weaviate database is not because it
+has a disk. This Blueprint can be adapted to support [other compatible
+datastores](https://github.com/openai/chatgpt-retrieval-plugin#choosing-a-vector-database)
+besides Weaviate.
+
+---
 
 > **Join the [ChatGPT plugins waitlist here](https://openai.com/waitlist/plugins)!**
 
