@@ -14,6 +14,8 @@ services:
       # will be promtped to add this in the UI on deployment
       - key: OPENAI_API_KEY
         sync: false
+      - key: OPENAI_API_BASE
+        sync: false
       - key: WEAVIATE_HOSTNAME
         fromService:
           type: pserv
